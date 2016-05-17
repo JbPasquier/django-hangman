@@ -6,9 +6,6 @@ from django.shortcuts import render_to_response
 from todos.models import Todo
 from todos.serializers import TodoSerializer
 
-def index(request):
-    return render_to_response('index.html')
-
 @api_view(['GET', 'POST'])
 def todo_list(request):
     """
