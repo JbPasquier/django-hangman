@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'rest_framework',
     'todos',
+    'hangman',
 ]
 
 MIDDLEWARE_CLASSES = [
