@@ -30,12 +30,12 @@ def todo_list(request):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-def todo_detail(request, pk):
+def todo_detail(request, id):
     """
     Get, udpate, or delete a specific task
     """
     try:
-        todo = Todo.objects.get(pk=pk)
+        todo = Todo.objects.get(pk=id)
     except Todo.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
